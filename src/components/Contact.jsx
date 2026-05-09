@@ -97,7 +97,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white dark:bg-slate-900/40 backdrop-blur-xl p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-2xl relative"
+            className="bg-white dark:bg-slate-900/40 backdrop-blur-xl p-6 sm:p-8 lg:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-2xl relative"
           >
             <div className="absolute top-0 right-10 w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
             
@@ -129,7 +129,7 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <div className="flex justify-center md:justify-start">
+              <div className="flex justify-center sm:justify-start">
                 <motion.button
                   whileHover={{ scale: 1.05, translateY: -2 }}
                   whileTap={{ scale: 0.95 }}

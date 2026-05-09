@@ -61,7 +61,7 @@ export default function Education() {
 
           {/* Timeline Item 1: SSC */}
           <div className="relative flex flex-col md:flex-row items-center md:justify-between group">
-            <motion.div variants={leftItemVariants} className="w-full md:w-[45%] mb-4 md:mb-0 text-center md:text-right">
+            <motion.div variants={leftItemVariants} className="w-full md:w-[45%] mb-8 md:mb-0 text-left md:text-right">
               <span className="inline-block px-4 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 rounded-full text-sm font-bold mb-2 border border-cyan-200 dark:border-cyan-400/20 shadow-sm">
                 2021 / Munsi Meher Ullah Academy
               </span>
@@ -91,7 +91,7 @@ export default function Education() {
               transition={{ delay: 0.5, type: "spring" }}
               className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-50 dark:bg-midnight border-2 border-accent rounded-full z-10 hidden md:block group-hover:scale-125 transition-transform shadow-[0_0_10px_rgba(255,77,77,0.8)]"
             />
-            <motion.div variants={rightItemVariants} className="w-full md:w-[45%] order-1 md:order-2 text-center md:text-left mb-4 md:mb-0">
+            <motion.div variants={rightItemVariants} className="w-full md:w-[45%] order-1 md:order-2 text-left mb-8 md:mb-0">
               <span className="inline-block px-4 py-1 bg-red-50 dark:bg-red-900/30 text-accent rounded-full text-sm font-bold mb-2 border border-red-200 dark:border-accent/20 shadow-sm">
                 2022 - 2026 / Jashore Polytechnic Institute
               </span>

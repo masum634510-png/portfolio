@@ -14,8 +14,7 @@
 
 @layer utilities {
   .section-padding {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    @apply py-16 md:py-24 lg:py-32;
   }
   .cyber-card {
     background: rgba(15, 23, 42, 0.6);

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="w-10/12 mx-auto">
+      <main className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         <Hero />
         <About />
         <Skills />

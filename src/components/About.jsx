@@ -39,7 +39,7 @@ export default function About() {
           <div className="relative z-10 overflow-hidden">
             <motion.img
               alt="Md Masum"
-              className="w-full h-[450px] lg:h-[600px] object-cover object-top filter contrast-[1.02]"
+              className="w-full h-[350px] md:h-[500px] lg:h-[600px] object-cover object-top filter contrast-[1.02]"
               style={{
                 maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)',
                 WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
@@ -54,7 +54,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute bottom-10 left-6 z-20 bg-white/10 dark:bg-slate-900/30 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-2xl flex items-center gap-3"
+              className="absolute bottom-6 left-4 md:bottom-10 md:left-6 z-20 bg-white/10 dark:bg-slate-900/30 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-2xl flex items-center gap-3"
             >
               <div className="w-9 h-9 bg-cyan-500/20 rounded-xl flex items-center justify-center text-cyan-500">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
