@@ -153,7 +153,7 @@ export default function Hero() {
             <div className="relative p-1.5 rounded-full bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-600 shadow-[0_0_80px_rgba(6,182,212,0.3)]">
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-[400px] lg:h-[400px] rounded-full border-4 border-slate-900 overflow-hidden bg-slate-900">
                 <Image
-                  src="/images/11.png"
+                  src="/images/22.png"
                   alt="Md Masum"
                   fill
                   className="object-cover object-top"
