@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -28,7 +27,7 @@ export default function Contact() {
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 -right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] -z-10" />
       <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10" />
-      
+
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -46,7 +45,7 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-          {/* Contact Info - Balanced 50% */}
+          {/* Contact Info */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -55,58 +54,58 @@ export default function Contact() {
             className="space-y-6 flex flex-col justify-center"
           >
             {[
-              { 
-                icon: "📧", 
-                label: "Email Me", 
+              {
+                icon: "📧",
+                label: "Email Me",
                 val: "masum634510@gmail.com",
-                color: "from-blue-500/10 to-cyan-500/10" 
+                color: "from-blue-500/10 to-cyan-500/10"
               },
-              { 
-                icon: "📱", 
-                label: "Call Me", 
+              {
+                icon: "📱",
+                label: "Call Me",
                 val: "01972788532",
-                color: "from-cyan-500/10 to-indigo-500/10" 
+                color: "from-cyan-500/10 to-indigo-500/10"
               },
-              { 
-                icon: "📍", 
-                label: "Location", 
+              {
+                icon: "📍",
+                label: "Location",
                 val: "Jashore, Dhaka, Bangladesh",
-                color: "from-indigo-500/10 to-blue-500/10" 
+                color: "from-indigo-500/10 to-blue-500/10"
               }
             ].map((item, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 variants={itemVariants}
                 whileHover={{ x: 10 }}
-                className="flex items-center gap-6 p-6 rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-slate-800 hover:border-cyan-500/30 transition-all duration-300 group shadow-sm"
+                className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-slate-800 hover:border-cyan-500/30 transition-all duration-300 group shadow-sm"
               >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-2xl group-hover:scale-110 transition-transform`}>
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition-transform shrink-0`}>
                   {item.icon}
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-1">{item.label}</p>
-                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200">{item.val}</p>
+                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200 break-all">{item.val}</p>
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Contact Form - Balanced 50% */}
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white dark:bg-slate-900/40 backdrop-blur-xl p-6 sm:p-8 lg:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-2xl relative"
+            className="bg-white dark:bg-slate-900/40 backdrop-blur-xl p-5 sm:p-8 lg:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-2xl relative"
           >
             <div className="absolute top-0 right-10 w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
-            
+
             <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 ml-1">Full Name</label>
                   <input
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400 text-sm font-medium"
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400 text-sm font-medium"
                     placeholder="Enter your name"
                     type="text"
                   />
@@ -114,18 +113,18 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 ml-1">Email Address</label>
                   <input
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400 text-sm font-medium"
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400 text-sm font-medium"
                     placeholder="example@email.com"
                     type="email"
                   />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 ml-1">Message</label>
                 <textarea
-                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-5 py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400 text-sm font-medium min-h-[120px] resize-none"
-                  placeholder="Describe your project or inquiry..."
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400 text-sm font-medium min-h-[120px] resize-none"
+                  placeholder="Descrip..."
                 ></textarea>
               </div>
 
@@ -133,7 +132,7 @@ export default function Contact() {
                 <motion.button
                   whileHover={{ scale: 1.05, translateY: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 rounded-xl font-bold uppercase tracking-wider text-xs bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 flex items-center gap-3"
+                  className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold uppercase tracking-wider text-xs bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 flex items-center justify-center gap-3"
                   type="submit"
                 >
                   Send Message

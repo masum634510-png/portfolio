@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -87,13 +86,14 @@ export default function Projects() {
       ],
     },
   ];
+
   return (
     <section
       className="section-padding bg-slate-50/50 dark:bg-slate-900/20"
       data-purpose="projects-section"
       id="projects"
     >
-      {/* ── Section Header ── */}
+      {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ export default function Projects() {
         </p>
       </motion.div>
 
-      {/* ── Project Cards ── */}
+      {/* Project Cards */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -126,22 +126,21 @@ export default function Projects() {
             variants={cardVariants}
             className="group rounded-3xl overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:border-cyan-400/40 transition-all duration-300"
           >
-            {/* ── Screenshot ── */}
-            <div className="relative h-52 md:h-60 overflow-hidden">
+            {/* Screenshot */}
+            <div className="relative h-52 sm:h-60 md:h-64 overflow-hidden">
               <Image
                 src={project.img}
                 alt={project.title}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
-              {/* Year badge */}
               <span className="absolute top-3 right-3 px-3 py-1 bg-slate-900/70 text-white text-xs font-semibold rounded-full backdrop-blur-sm">
                 {project.year}
               </span>
             </div>
 
-            {/* ── Card Body ── */}
-            <div className="p-6">
+            {/* Card Body */}
+            <div className="p-5 sm:p-6">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                 {project.title}
               </h3>
@@ -149,7 +148,7 @@ export default function Projects() {
                 {project.desc}
               </p>
 
-              {/* ── Tech Stack ── */}
+              {/* Tech Stack */}
               <div className="mb-4">
                 <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
                   🛠 Technologies Used
@@ -166,7 +165,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* ── Challenges Toggle ── */}
+              {/* Challenges Toggle */}
               <button
                 onClick={() =>
                   setActiveChallenge(
@@ -203,16 +202,18 @@ export default function Projects() {
                 )}
               </AnimatePresence>
 
-              {/* ── Action Buttons ── */}
+              {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href={project.github}
+                  target="_blank"
                   className="flex-1 text-center bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-sm"
                 >
                   GitHub ↗
                 </Link>
                 <Link
                   href={project.demo}
+                  target="_blank"
                   className="flex-1 text-center bg-cyan-600 hover:bg-cyan-700 dark:bg-cyan-600 dark:hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl shadow-lg shadow-cyan-600/20 transition-all text-sm"
                 >
                   Live Demo ↗

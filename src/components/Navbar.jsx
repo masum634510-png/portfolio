@@ -17,7 +17,7 @@ export default function Navbar() {
           className="font-mono font-bold text-xl text-cyan-600 dark:text-cyan-400 cursor-pointer active:scale-95 duration-200"
           data-purpose="brand-logo"
         >
-          Masum
+          Masum.dev
         </div>
 
         {/* Desktop Menu */}
